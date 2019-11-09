@@ -7,7 +7,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - uses: ./
     - name: Hello world action step
       id: hello
       uses: ./
