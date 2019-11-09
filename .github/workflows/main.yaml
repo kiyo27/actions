@@ -8,7 +8,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Hello world action step
-      id: hello
+      # id: hello
       uses: ./
       with:
         who-to-greet: 'Mona the Octocat'
