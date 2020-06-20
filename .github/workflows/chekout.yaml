@@ -1,4 +1,5 @@
 name: my_checkout
+
 on:
   push:
     branches:
@@ -17,9 +18,11 @@ jobs:
           LAST_NAME: Octocat
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
-    services:
-      nginx: 
-        image: nginx
-        ports:
-          - 8080:80
 
+      - name: Checkout private repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ secrets.PRIVATE_REPOSITORY }}
+      - name: Show list
+        run: |
+          ls
