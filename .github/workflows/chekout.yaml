@@ -18,7 +18,8 @@ jobs:
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
     services:
-      nginx: nginx
+      nginx: 
+        image: nginx
         ports:
           - 8080:80
 
