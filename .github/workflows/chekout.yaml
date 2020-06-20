@@ -18,6 +18,8 @@ jobs:
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
       - name: Service container
+        run: |
+          echo "Hello world!"
         services:
           nginx: nginx
           ports:
