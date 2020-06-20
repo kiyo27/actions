@@ -24,6 +24,7 @@ jobs:
         with:
           repository: ${{ secrets.PRIVATE_REPOSITORY }}
           ref: master
+          token: ${{ secrets.PAT }}
       - name: Show list
         run: |
           ls
